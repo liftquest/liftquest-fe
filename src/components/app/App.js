@@ -1,6 +1,7 @@
 import React from 'react'
+import Wrapper from './style'
 
-const App = () =>
-  <h1>LIFTQUEST</h1>
-
-export default App
+export default () =>
+  <Wrapper>
+    <h1>LIFTQUEST</h1>
+  </Wrapper>

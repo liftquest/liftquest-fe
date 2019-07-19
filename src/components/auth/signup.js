@@ -1,9 +1,9 @@
 import React from 'react'
 import Wrapper from './style'
 
-const Login = () =>
+const Signup = () =>
   <Wrapper>
-    <h1>Login Page</h1>
+    <h1>Signup Page</h1>
   </Wrapper>
 
-export default Login
+export default Signup
