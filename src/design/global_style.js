@@ -4,6 +4,11 @@ import {reset} from 'styled-reset'
 const GlobalStyle = createGlobalStyle`
     ${reset}
     // font imports
+    @font-face {
+        font-family: premier;
+        src: url('/fonts/premier.otf');
+    }
+
     * {box-sizing: border-box}
     html {
         font-size: 62.5%;
@@ -18,3 +23,5 @@ const GlobalStyle = createGlobalStyle`
         height: 100%;
     }
 `
+
+export default GlobalStyle
