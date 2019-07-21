@@ -12,6 +12,10 @@ const GlobalStyle = createGlobalStyle`
         font-family: misery;
         src: url('/fonts/misery.otf');
     }
+    //animations
+    @keyframes blink {
+        50% {opacity: 0.0;}
+    }
 
     * {box-sizing: border-box}
     html {
@@ -25,7 +29,7 @@ const GlobalStyle = createGlobalStyle`
     }
     #liftquest {
         align-items: flex-start;
-        background-color: #000;
+        background-color: #030B0F;
         color: #ccc;
         display: flex;
         height: 100%;

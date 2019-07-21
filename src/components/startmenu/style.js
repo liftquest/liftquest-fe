@@ -27,6 +27,8 @@ export default Styled.div`
         pre {
             font-family: premier;
             font-size: 3vmin;
+            color: #ccc;
+            animation: blink 666ms infinite;
         }
     }
     
