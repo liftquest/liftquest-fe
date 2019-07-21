@@ -1,7 +1,10 @@
 import React from 'react'
 import Wrapper from './style'
 
+//components
+import Startmenu from '../startmenu'
+
 export default () =>
   <Wrapper>
-    <h1>LIFTQUEST</h1>
+    <Startmenu />
   </Wrapper>

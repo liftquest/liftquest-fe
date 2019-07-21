@@ -8,6 +8,10 @@ const GlobalStyle = createGlobalStyle`
         font-family: premier;
         src: url('/fonts/premier.otf');
     }
+    @font-face {
+        font-family: misery;
+        src: url('/fonts/misery.otf');
+    }
 
     * {box-sizing: border-box}
     html {
@@ -19,8 +23,13 @@ const GlobalStyle = createGlobalStyle`
         height: 100%;
         width: 100%;
     }
-    #root {
+    #liftquest {
+        align-items: flex-start;
+        background-color: #000;
+        color: #ccc;
+        display: flex;
         height: 100%;
+        justify-content: center;
     }
 `
 

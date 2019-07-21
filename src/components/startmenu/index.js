@@ -1,9 +1,18 @@
 import React from 'react'
 import Wrapper from './style'
 
-const Start = () =>
-  <Wrapper>
-    <h1>Press Enter Button</h1>
+//components
+import Logo from '../../design/icons/liftquest'
+
+const StartMenu = () =>
+  <Wrapper className='startmenu'>
+    <div className='logo'>
+      <Logo />
+      <h1>LIFT QUEST</h1>
+    </div>
+    <div className='content'>
+      <pre>Press Enter Button</pre>
+    </div>
   </Wrapper>
 
-export default Start
+export default StartMenu
