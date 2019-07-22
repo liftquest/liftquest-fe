@@ -1,11 +1,12 @@
 import Styled from 'styled-components'
 
 export default Styled.div`
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    height: 100%;
+    & > ul {min-height: 15vmin}
     .logo {
         display: flex;
         flex-direction: column;
@@ -23,13 +24,18 @@ export default Styled.div`
             letter-spacing: 2vmin;
         }
     }
-    .content {
-        pre {
+    .menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        li {
+            color: #ccc;
+            cursor: pointer;
             font-family: premier;
             font-size: 3vmin;
-            color: #ccc;
-            animation: blink 666ms infinite;
+            text-transform: uppercase;
+            &.active {animation: blink 666ms infinite}
         }
     }
-    
 `

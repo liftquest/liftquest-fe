@@ -3,7 +3,7 @@ import {reset} from 'styled-reset'
 
 const GlobalStyle = createGlobalStyle`
     ${reset}
-    // font imports
+    //FONTS
     @font-face {
         font-family: premier;
         src: url('/fonts/premier.otf');
@@ -12,11 +12,11 @@ const GlobalStyle = createGlobalStyle`
         font-family: misery;
         src: url('/fonts/misery.otf');
     }
-    //animations
+    //ANIMATIONS
     @keyframes blink {
         50% {opacity: 0.0;}
     }
-
+    //STYLE
     * {box-sizing: border-box}
     html {
         font-size: 62.5%;
@@ -34,6 +34,10 @@ const GlobalStyle = createGlobalStyle`
         display: flex;
         height: 100%;
         justify-content: center;
+    }
+    a {
+        color: inherit;
+        text-decoration: none;
     }
 `
 
