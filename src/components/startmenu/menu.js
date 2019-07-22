@@ -6,8 +6,8 @@ const Menu = ({data, click, change}) =>
         {data.options.map(option =>
             <li
                 key={option.text}
-                className={option.route === data.active ? 'active' : null}
-                name={option.route}
+                className={option.name === data.active ? 'active' : null}
+                name={option.name}
                 onMouseEnter={change}
                 onKeyUp={click}
                 onClick={click}
