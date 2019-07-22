@@ -2,14 +2,16 @@ import React from 'react'
 
 const Menu = ({data, click, change}) =>
     <ul className='menu'>
+        {/* {console.log(data)} */}
         {data.options.map(option =>
             <li
-                key={option}
-                className={option === data.active ? 'active' : null}
+                key={option.text}
+                className={option.route === data.active ? 'active' : null}
+                name={option.route}
                 onMouseEnter={change}
                 onKeyUp={click}
                 onClick={click}
-                >{option}</li>
+                >{option.text}</li>
         )}
     </ul>
 

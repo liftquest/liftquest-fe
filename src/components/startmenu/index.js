@@ -1,4 +1,5 @@
 import React from 'react'
+import {withRouter} from "react-router-dom";
 import Wrapper from './style'
 
 //components
@@ -8,8 +9,8 @@ import Logo from '../../design/icons/liftquest'
 
 class StartMenu extends React.Component {
   state = {
-    active: 'press enter button',
-    options: ['press enter button']
+    active: '/start',
+    options: [{route: '/start', text: 'press enter button'}]
   }
   componentDidMount = () => {
     window.addEventListener('keyup', this.check_key)
@@ -18,30 +19,33 @@ class StartMenu extends React.Component {
     window.removeEventListener('keyup', this.check_key)
   }
   start = () => {
-    if(this.state.active === 'press enter button') {
+    if(this.state.active === '/start') {
       this.setState({
-        active: 'continue',
-        options: ['continue', 'new game', 'about'],
+        active: '/login',
+        options: [
+          {route: '/login', text: 'continue'},
+          {route: '/signup', text: 'new game'},
+          {route: '/about', text: 'about'}
+        ]
       })
     } else {
-      console.log(this.state.active)
+      this.props.history.push(this.state.active)
     }
   }
   change_option = e => {
-    console.log(e.key)
     this.setState({
-      active: e.currentTarget.innerText
+      active: e.currentTarget.name
     })
   }
   update_active = inc => {
-    let idx = this.state.options.indexOf(this.state.active)
+    let idx = this.state.options.findIndex(options => options.route === this.state.active)
     const max = this.state.options.length
     if(inc) {
       idx += inc
       if(idx > max - 1) idx = 0
       if(idx < 0) idx = max -1
       this.setState({
-        active: this.state.options[idx]
+        active: this.state.options[idx].route
       })
     }
   }
@@ -63,4 +67,4 @@ class StartMenu extends React.Component {
     </Wrapper>
 }
 
-export default StartMenu
+export default withRouter(StartMenu)
